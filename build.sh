@@ -28,6 +28,6 @@ gox -arch="$GOX_ARCH" -os="$GOX_OS" -output="$GOX_TEMPLATE" github.com/apparentl
 cd "$DISTDIR"
 for dir in *"-$VERSION"; do
     cp ../README.md "$dir/README.md"
-    tar jcf "$dir.tar.bz2" "$dir/README.md"
+    tar jcf "$dir.tar.bz2" "$dir"
     echo "dist/$dir.tar.bz2"
 done
